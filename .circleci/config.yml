@@ -337,12 +337,6 @@ jobs:
             else
               return 1
             fi
-
-      - destroy-environment:
-          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
-      - revert-migrations:
-          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
-
   cloudfront-update:
     docker:
       - image: circleci/node:13.8.0
@@ -369,6 +363,11 @@ jobs:
 
             echo OldWorkflowID $OldWorkflowID
             echo CIRCLE_WORKFLOW_ID "${CIRCLE_WORKFLOW_ID:0:7}"
+      - destroy-environment:
+          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+      - revert-migrations:
+          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+
   cleanup:
     docker:
       - image: amazon/aws-cli
