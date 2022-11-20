@@ -1,6 +1,6 @@
 [URL01]
 https://github.com/infiq2000/cdond-c3-projectstarter
 [URL02]
-https://udapeople-a95a0ff.s3.amazonaws.com
+https://udapeople-221ff42.s3.amazonaws.com/index.html
 [URL03]
 http://dxkrugx18rajb.cloudfront.net/#/employees
